@@ -1,6 +1,6 @@
 var app = angular.module("HangmanApp", []);
 
-app.controller("GameController",['$scope', function ($scope){
+app.controller("GameController",['$scope', '$timeout', function ($scope, $timeout) {
 
     $scope.demo = "someString";
 
@@ -58,9 +58,24 @@ app.controller("GameController",['$scope', function ($scope){
         if(correct) {
             $scope.correctLettersChosen.push($scope.input.letter.toLowerCase());
         } else {
+            $scope.guesses--;
             $scope.incorrectLettersChosen.push($scope.input.letter.toLowerCase());
         }
         $scope.input.letter = "";
+        if($scope.guesses == 0) {
+         // alert("You lost!");  
+            $timeout(function(){
+                newGame();
+            }, 500);
+        }
+        
+        if($scope.displayWord.indexOf("*") == -1) {
+        //  alert("You won!");
+            alert("You lost!");  
+            $timeout(function(){
+                newGame();
+            }, 500);
+        }
     
     }
     newGame();
