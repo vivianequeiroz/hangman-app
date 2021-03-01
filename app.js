@@ -1,5 +1,5 @@
 var app = angular.module("HangmanApp", []);
-
+                   // provides support for compression
 app.controller("GameController",['$scope', '$timeout', function ($scope, $timeout) {
 
     $scope.demo = "someString";
@@ -61,7 +61,9 @@ app.controller("GameController",['$scope', '$timeout', function ($scope, $timeou
             $scope.guesses--;
             $scope.incorrectLettersChosen.push($scope.input.letter.toLowerCase());
         }
+        
         $scope.input.letter = "";
+        
         if($scope.guesses == 0) {
          // alert("You lost!");  
             $timeout(function(){

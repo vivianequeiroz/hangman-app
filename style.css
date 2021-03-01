@@ -1,0 +1,84 @@
+/* CSS HEX
+--flame: #e4572eff;
+--space-cadet: #29335cff;
+--marigold: #f3a712ff;
+--olivine: #a8c686ff;
+--air-superiority-blue: #669bbcff; */
+
+* {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #a8c686ff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+body {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+}
+
+h1 {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 3rem;
+    color: #29335cff;
+}
+
+.guesses-left, .incorrect-guesses, .correct-guesses {
+    width: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.word-to-guess {
+    margin-top: 1.5rem;
+    margin-bottom: 0.875rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 0.1rem solid #FFF;
+    padding: 0.5rem;
+}
+
+.user-attempt {
+    font-size: 1.8rem;
+    margin-bottom: 0.7em;
+}
+
+.submit input {
+    font-family: 'DotGothic16', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #669bbcff;
+    border: none;
+    height: 2rem;
+    width: 4rem;
+    display: block;
+    align-items: center;
+    border-radius: 10%;
+    margin-left: 1rem;
+}
+
+.btn {
+    height: 3rem;
+    width: 6rem;
+   margin-top: 2rem;
+   font-size: 1.2rem; 
+   border: none;
+   text-align: center;
+   font-family: 'DotGothic16', sans-serif;
+   border-radius: 0.8rem;
+   letter-spacing: 0.15rem;
+}
+
+.btn:hover {
+    transition-duration: 1s;
+    background-color: rgb(226, 117, 83);
+}

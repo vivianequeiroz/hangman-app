@@ -4,36 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=DotGothic16&display=swap" rel="stylesheet"> 
+    
     <title>Hangman app</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
-    <div>
+
+<div class="container">
+    <h1>Hangman Puzzle</h1>
+    <div class="guesses-left">
         Guesses left: {{guesses}}
     </div>
-    <div>
+    <div class="incorrect-guesses">
         Incorrect guesses: 
         <span ng-repeat="letter in incorrectLettersChosen">
             {{letter}}
         </span>
     </div>
-    <div>
-        Correct guesses: 
+    <div class="correct-guesses">
+        Correct guesses:
         <span ng-repeat="letter in correctLettersChosen">
             {{letter}}
         </span>
     </div>
 
-    <div>You have to guess: {{displayWord}}</div>
+    <div class="word-to-guess" >You have to guess: {{displayWord}}</div>
 
+    <div class="user-attempt">Type your guess below!</div>
 
-    <div>
-        <div>
-            <input type="text" name="guess" ng-model="input.letter">
-            <button ng-click="letterChosen()">Submit</button>
-        </div>
+    <div class="submit">
+        <input type="text" name="guess" ng-model="input.letter">
+        <button class="btn" ng-click="letterChosen()">Submit</button>
     </div>
-
+</div>
 </body>
 </html>
