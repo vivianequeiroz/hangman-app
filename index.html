@@ -21,24 +21,24 @@
         Guesses left: {{guesses}}
     </div>
     <div class="incorrect-guesses">
-        Incorrect guesses: 
+        Incorrect: 
         <span ng-repeat="letter in incorrectLettersChosen">
             {{letter}}
         </span>
     </div>
     <div class="correct-guesses">
-        Correct guesses:
+        Correct:
         <span ng-repeat="letter in correctLettersChosen">
             {{letter}}
         </span>
     </div>
 
-    <div class="word-to-guess" >You have to guess: {{displayWord}}</div>
+    <div class="word-to-guess" >That's the word you have to guess: {{displayWord}}</div>
 
     <div class="user-attempt">Type your guess below!</div>
 
     <div class="submit">
-        <input type="text" name="guess" ng-model="input.letter">
+        <input type="text" name="guess" ng-model="input.letter"  placeholder="type here!">
         <button class="btn" ng-click="letterChosen()">Submit</button>
     </div>
 </div>

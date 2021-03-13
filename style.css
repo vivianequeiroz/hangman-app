@@ -21,7 +21,7 @@
 } 
 
 body {
-    font-family: 'Amatic SC', cursive;
+    font-family: 'DotGothic16', sans-serif;
     font-size: 2rem;
 }
 
@@ -29,6 +29,8 @@ h1 {
     font-family: 'DotGothic16', sans-serif;
     font-size: 3rem;
     color: #29335cff;
+    border: 0.5rem solid #f3a712ff;
+    padding: 0.25rem
 }
 
 .guesses-left, .incorrect-guesses, .correct-guesses {
@@ -43,7 +45,6 @@ h1 {
     margin-bottom: 0.875rem;
     font-size: 1.5rem;
     font-weight: bold;
-    border: 0.1rem solid #FFF;
     padding: 0.5rem;
 }
 
@@ -59,11 +60,11 @@ h1 {
     background-color: #669bbcff;
     border: none;
     height: 2rem;
-    width: 4rem;
+    width: 5.1rem;
     display: block;
     align-items: center;
     border-radius: 10%;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .btn {
