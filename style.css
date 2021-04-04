@@ -12,7 +12,7 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background: #a8c686ff;
+    background: rgb(198, 190, 136);
 
     display: flex;
     flex-direction: column;
@@ -29,8 +29,12 @@ h1 {
     font-family: 'DotGothic16', sans-serif;
     font-size: 3rem;
     color: #29335cff;
-    border: 0.5rem solid #f3a712ff;
     padding: 0.25rem
+}
+
+.img-hangman img {
+    max-width:20px;
+    max-height:50px;
 }
 
 .guesses-left, .incorrect-guesses, .correct-guesses {
@@ -82,4 +86,18 @@ h1 {
 .btn:hover {
     transition-duration: 1s;
     background-color: rgb(226, 117, 83);
+}
+
+@keyframes fa-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.fa-blink {
+  -webkit-animation: fa-blink .99s linear infinite;
+  -moz-animation: fa-blink .99s linear infinite;
+  -ms-animation: fa-blink .99s linear infinite;
+  -o-animation: fa-blink .99s linear infinite;
+  animation: fa-blink .99s linear infinite;
 }
